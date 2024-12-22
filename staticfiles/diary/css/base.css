@@ -1,0 +1,48 @@
+body{
+  width: 1000px;
+  min-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  background-color: #ffffff;
+}
+
+h1.span{
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.button {
+  background-color: #333;
+  border-radius: 50px;
+  color: #fff;
+  padding: 0px 15px;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.title{
+  font-size: 30px;
+  font-size: 3rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color:#333
+}
+
+.titleHeader{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 3px black;
+  color:#333
+}
+
+div.titleHeader .button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  width: 800px;
+}
