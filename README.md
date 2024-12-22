@@ -18,12 +18,16 @@
 |DB|SQLite|
 
 ## Demo
-* 
+* 日記作成と詳細画面　https://gyazo.com/5c9e96a0150589f0386814b8300da925
+* 日記編集　https://gyazo.com/4840d57a84dee7e422a9316fe3cf7c9d
+* 日記削除　https://gyazo.com/185da0253f804ebe698d349f76d32f59
+* 今日は何の日？ メニュー押下　https://gyazo.com/18534dcfb5d90f1884abaa5689d6de50
+* 明日の天気 メニュー押下　https://gyazo.com/528ba765a86e13eaa5706249a1a5c42a
 
 ## Usage
 1.リポジトリをクローンする。`https://github.com/dorabby/PysonDiary.git`
 
-2.myproject配下でサーバーを起動する。
+2./PysonDiary/diary配下でサーバーを起動する。
 ```
 python manage.py runserver
 ```
