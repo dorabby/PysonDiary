@@ -38,8 +38,8 @@ class PageCreateView(LoginRequiredMixin,View):
     form=PageForm(request.POST, request.FILES) 
     if form.is_valid():
       form.save()
-      # 日記のトップページへリダイレクト
-      return redirect("diary:index")
+      # 日記の一覧へリダイレクト
+      return redirect("diary:page_list")
     # バリデーションチェックに引っかかった場合
     return render(request, "diary/page_form.html", {"form": form})
 
