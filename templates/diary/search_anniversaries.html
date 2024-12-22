@@ -1,0 +1,12 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+  <title>今日は何の日？</title>
+  <h1>{{month}}月{{day}}日は何の日？</h1>
+  <p>記念日をクリックすると別窓で検索します</p>
+  {% for result in result_list %}
+    <p>●<a href="https://www.google.com/search?q={{result}}" target="_blank">{{result}}</a></p>
+  {% empty %}
+    <div>記念日情報はありません。</div>
+  {% endfor %}
+  <div>記念日をネタにして<a href="{% url 'diary:page_create' %}" >日記を書く!</a></div>
+{% endblock %}

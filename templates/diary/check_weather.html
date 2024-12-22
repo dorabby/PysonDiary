@@ -1,0 +1,15 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+  <title>明日の天気</title>
+  <h1>明日の天気</h1>
+  <div>
+    <li>明日の天気は{{result.weather}}</li>
+    <li>最高気温は{{result.high}}</li>
+    <li>最低気温は{{result.low}}</li>
+    <li>降水確率は</li>
+    <li>0-6時:{{result.rain_06}}</li>
+    <li>6-12時:{{result.rain_612}}</li>
+    <li>12-18時:{{result.rain_1218}}</li>
+    <li>18-24時:{{result.rain_1824}}</li>
+  </div>
+{% endblock %}

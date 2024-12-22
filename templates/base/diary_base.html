@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>日記</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'diary/css/base.css' %}">
+    <script src="{% static 'diary/js/base.js' %}"></script>
+  </head>
+  <body>
+    <h1><a href="{% url 'diary:index' %}" class="title">日記</a></h1>
+    <div class="titleHeader">
+      <div>
+        <span id="clock"></span>
+        <span class="button"><a href="{% url 'diary:page_list' %}" >ページ一覧</a></span>
+        <span class="button"><a href="{% url 'diary:page_create' %}" >日記を書く</a></span>
+        <span class="button"><a href="{% url 'diary:search_anniversaries' %}" >今日は何の日？</a></span>
+        <span class="button"><a href="{% url 'diary:check_weather' %}" >明日の天気</a></span>
+      </div>
+      <form action="{% url 'accounts:logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="button">ログアウト</button>
+      </form>
+    </div>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

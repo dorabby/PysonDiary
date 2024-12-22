@@ -1,0 +1,15 @@
+<head>
+  <meta charset="UTF-8">
+  <title>日記</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'diary/css/base.css' %}">
+  <script src="{% static 'diary/js/base.js' %}"></script>
+</head>
+<body>
+<h2>ログイン</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">ログイン</button>
+  </form>
+</body>
