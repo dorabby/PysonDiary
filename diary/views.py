@@ -109,7 +109,8 @@ class SearchAnnivarsariesView(LoginRequiredMixin,View):
           result=todayAnniv.anniv1,todayAnniv.anniv2,todayAnniv.anniv3,todayAnniv.anniv4,todayAnniv.anniv5
         else:
           # DBを確認して、保存された日付と違う場合、APIにリクエストする
-          url = f"https://api.k9r06rlu.me/v3/anniv/" + mmdd
+          # powered by whatistodayAPI
+          url = f"https://api.whatistoday.cyou/v3/anniv/" + mmdd
           r = requests.get(url).json()
           # 取得後DBを更新する（何度もAPIを叩かないようにするため）
           result=r["anniv1"],r["anniv2"],r["anniv3"],r["anniv4"],r["anniv5"]
